@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button style="margin-right: 5px; margin-left: 5px;" type="button" class="btn btn-dark" (click)="basicSearch()">Search</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="advancedSearch()">Advanced Search</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="geoSearch()">Geolocation Search</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="statistic()">Statistics</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="register()">New Applicant</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="workers()">Applicants</button>
+      </li>
+      <li class="nav-item">
+        <button style="margin-right: 5px;" type="button" class="btn btn-dark" (click)="login()">Sign In</button>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

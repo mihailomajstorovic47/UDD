@@ -1,0 +1,40 @@
+<section class="vh-100" style="background-color: #212529;">
+    <div class="container h-100" style="background-color: #212529;">
+      <div class="row d-flex justify-content-center align-items-center h-100" style="background-color: #212529;">
+        <div class="col-lg-12 col-xl-11" >
+          <div class="card text-black" style="border-radius: 25px; background-color: darkgray;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    <div *ngFor="let r of result">
+                        <div class="card" style="margin-top: 3%;" *ngIf="result[0].name != ''">
+                            <div class="card-body">
+                              <h5 class="card-title">{{r.name}}</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">{{r.education}}</h6>
+                              <h6 class="card-subtitle mb-2 text-muted">{{r.address}}</h6>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-9">
+                                  <select class="custom-select" id="inputGroupSelect01" (change)="selectCompany($event)">
+                                    <option selected value="1">Microsoft</option>
+                                    <option value="2">Google</option>
+                                    <option value="3">Amazon</option>
+                                    <option value="4">Netflix</option>
+                                    <option value="5">Tesla</option>
+                                </select>
+                                </div>
+                                <div class="col-sm-3">
+                                  <button class="btn btn-outline-primary" style="margin-left: 6%;" (click)="hire(r.id)">Hire</button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

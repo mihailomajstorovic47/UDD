@@ -1,0 +1,106 @@
+<section class="vh-100" style="background-color: #212529;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px; background-color: darkgray;">
+          <div class="card-body p-md-2">
+            <div class="row justify-content-center">
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Advanced Search</p>
+                    <div class="container-fluid">
+                      <div *ngFor="let field of fields; let i = index" style="margin-top: 15px;" >
+                      <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1">
+                          <select *ngIf="i > 0" class="custom-select" id="inputGroupSelect01" (change)="operator($event, i)">
+                            <option selected value="AND">AND</option>
+                            <option value="OR">OR</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-3">
+                          <select class="custom-select" id="inputGroupSelect01" (change)="criteria($event, i)">
+                            <option selected value="0">Search Criteria</option>
+                            <option value="firstName">Name</option>
+                            <option value="lastName">Last Name</option>
+                            <option value="education">Education Level</option>
+                            <option value="cvContent">CV Content</option>
+                            <option value="clContent">Cover Letter Content</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-4">
+                          <input *ngIf="this.fields[i].criteria !== 'education'" type="text" id="form3Example4cdU" placeholder="Query text" class="form-control" [(ngModel)]="field.content"/>
+                          <div *ngIf="this.fields[i].criteria === 'education'" class="d-flex flex-row align-items-center mb-4">
+                            <select class="custom-select" id="inputGroupSelect01" (change)="educationLevel($event, i)">
+                                <option selected>Education level</option>
+                                <option value="I">I - Elementary School (4 grades)</option>
+                                <option value="II">II - Elementary School</option>
+                                <option value="III">III - Middle School (3 years)</option>
+                                <option value="IV">IV - Middle school (4 years)</option>
+                                <option value="V">V - High School</option>
+                                <option value="VI">VI - Faculty (Bachelor's Degree)</option>
+                                <option value="VII">VII - Faculty (Master's Degree)</option>
+                                <option value="VIII">VIII - Faculty (Doctor's degree)</option> 
+                            </select>
+                        </div>
+                        </div>
+                        <div class="col-sm-1" style="margin-left: 2%; margin-top: 0.5%;">
+                          <input class="form-check-input" type="checkbox" id="myCheckbox" (change)="selectPhrase(i, $event)">
+                              <label class="form-check-label" for="myCheckbox">
+                                Phrase
+                              </label>
+                        </div>
+                        <div class="col-sm-1">
+                          <button *ngIf="i > 0" type="button" class="btn btn-danger" (click)="removeField(i)">Remove</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="margin-top: 3%;">
+                      <div class="col-sm-8">
+
+                      </div>
+                      <div class="col-sm-2" style="margin-left: 3%;"></div>
+                      <div class="col-sm-1">
+                        <button type="button" class="btn btn-success" (click)="addField()">Add</button>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                        <button [disabled]="this.fieldCount < 2" type="button" class="btn btn-primary btn-lg" (click)="submit()">Search</button>
+                    </div>
+
+
+                    <div *ngFor="let r of result">
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                          <div class="card" *ngIf="result[0].firstName != ''">
+                            <div class="card-body">
+                              <h5 class="card-title">{{r.firstName}} {{r.lastName}}</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">{{r.education}}</h6>
+                              <h6 class="card-subtitle mb-2 text-muted">{{r.address}}</h6>
+                              <p class="card-text">{{r.highlight}}</p>
+                              <hr>
+                                <div class="row">
+                                  <div class="col-sm-4" style="margin-top: 2%;">
+                                    <b>Download ---></b>
+                                  </div>
+                                  <div class="col-sm-1">
+                                    <button class="btn btn-outline-primary" (click)="downloadCV(r.id)" >CV</button>
+                                  </div>
+                                  <div class="col-sm-7">
+                                    <button class="btn btn-outline-primary" style="margin-left: 100px;" (click)="downloadCL(r.id)">Cover letter</button>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

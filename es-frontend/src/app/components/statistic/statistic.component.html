@@ -1,0 +1,41 @@
+<div class="container-fluid h-100" style="background-color: #212529;">
+    <br>
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <br><br>
+        <div class="row" style="margin-top: 4%;">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-2 text-center">
+            <h1 style="color: white;">
+                Statistics
+            </h1>
+            </div>
+            <div class="col-sm-5"></div>
+        </div>
+        <div class="row" style="margin-top: 3%;">
+        <div class="col-sm-4">
+            <iframe src="http://localhost:5601/app/kibana#/visualize/edit/6d743750-182a-11ee-b540-c598e3790428?embed=true&_g=(refreshInterval:(pause:!t,value:0),time:(from:'2023-06-28T15:55:13.798Z',to:now))&_a=(filters:!(),linked:!f,query:(language:kuery,query:'message+:+%22INFO+c.udd.udd.service.ApplicantService+-+New+successful+employment+by+employee:%22'),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'%23+of+applicants+employed'),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Employees,field:message.keyword,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:5),schema:segment,type:terms)),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!t,rotate:0,show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),dimensions:(x:(accessor:0,aggType:terms,format:(id:terms,params:(id:string,missingBucketLabel:Missing,otherBucketLabel:Other)),params:()),y:!((accessor:1,aggType:count,format:(id:number),params:()))),grid:(categoryLines:!f),labels:(show:!f),legendPosition:right,seriesParams:!((data:(id:'1',label:'%23+of+applicants+employed'),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),thresholdLine:(color:%2334130C,show:!f,style:full,value:10,width:1),times:!(),type:histogram,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:'%23+of+applicants+employed'),type:value))),title:'Employee+hirings',type:histogram))" height="500" width="620"></iframe>        </div>
+        <div class="col-sm-4">
+            <iframe src="http://localhost:5601/app/kibana#/visualize/edit/4c64dbd0-182c-11ee-b540-c598e3790428?embed=true&_g=(refreshInterval:(pause:!t,value:0),time:(from:'2023-06-28T15:55:13.798Z',to:now))&_a=(filters:!(),linked:!f,query:(language:kuery,query:'message+:+%22INFO++c.udd.udd.service.ApplicantService+-+New+employment+in+the+company:%22'),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'%23+of+applicants+employed'),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Companies,field:message.keyword,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:5),schema:segment,type:terms)),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!t,rotate:0,show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),dimensions:(x:(accessor:0,aggType:terms,format:(id:terms,params:(id:string,missingBucketLabel:Missing,otherBucketLabel:Other)),params:()),y:!((accessor:1,aggType:count,format:(id:number),params:()))),grid:(categoryLines:!f),labels:(show:!f),legendPosition:right,seriesParams:!((data:(id:'1',label:'%23+of+applicants+employed'),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),thresholdLine:(color:%2334130C,show:!f,style:full,value:10,width:1),times:!(),type:histogram,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:'%23+of+applicants+employed'),type:value))),title:'Company+employments',type:histogram))" height="500" width="620"></iframe>        </div>
+        <div class="col-sm-4">
+            <iframe src="http://localhost:5601/app/kibana#/visualize/edit/759be510-182d-11ee-b540-c598e3790428?embed=true&_g=(refreshInterval:(pause:!t,value:0),time:(from:'2023-06-28T15:55:13.798Z',to:now))&_a=(filters:!(),linked:!f,query:(language:kuery,query:'message+:+%22INFO++c.u.u.c.ApplicantController+-+Request+for+registration+received+from+city:%22'),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(customLabel:'%23+of+applicants+from+city'),schema:metric,type:count),(enabled:!t,id:'2',params:(customLabel:Cities,field:message.keyword,missingBucket:!f,missingBucketLabel:Missing,order:desc,orderBy:'1',otherBucket:!f,otherBucketLabel:Other,size:5),schema:segment,type:terms)),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(filter:!t,rotate:0,show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(),type:category)),dimensions:(x:(accessor:0,aggType:terms,format:(id:terms,params:(id:string,missingBucketLabel:Missing,otherBucketLabel:Other)),params:()),y:!((accessor:1,aggType:count,format:(id:number),params:()))),grid:(categoryLines:!f),labels:(show:!f),legendPosition:right,seriesParams:!((data:(id:'1',label:'%23+of+applicants+from+city'),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),thresholdLine:(color:%2334130C,show:!f,style:full,value:10,width:1),times:!(),type:histogram,valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:'%23+of+applicants+from+city'),type:value))),title:'City+statistics',type:histogram))" height="500" width="620"></iframe>        
+        </div>
+        </div>
+        <div class="row" style="margin-top: 2%;">
+            <div class="col-sm-4 text-center">
+                <h4 style="color: white;">
+                    Employees and number of applicants hired by them
+                </h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h4 style="color: white;">
+                    Companies and number of applicants hired for them
+                </h4>
+            </div>
+            <div class="col-sm-4 text-center">
+                <h4 style="color: white;">
+                    Cities and number of applications sent from there
+                </h4>
+            </div>
+        </div>
+</div>
+</div>

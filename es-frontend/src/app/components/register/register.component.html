@@ -1,0 +1,89 @@
+<section class="vh-100" style="background-color: #212529;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px; background-color: darkgray;">
+            <div class="card-body p-md-2">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
+  
+  
+                    <div class="d-flex flex-row align-items-center mb-2">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" placeholder="Name" class="form-control" [(ngModel)]="user.firstName" name="name">
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-2"  style="margin-top: 3%;">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example6c" placeholder="Lastname" class="form-control" [(ngModel)]="user.lastName" name="lastName"/>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-2"  style="margin-top: 3%;">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example4cdU" placeholder="Street" class="form-control" [(ngModel)]="user.street"/>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-2"  style="margin-top: 3%;">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="form3Example4cdG" placeholder="City" class="form-control" [(ngModel)]="user.city"/>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-2"  style="margin-top: 3%;">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <select class="custom-select" id="inputGroupSelect01" (change)="educationLevel($event)">
+                            <option selected>Education level</option>
+                            <option value="1">I - Elementary School (4 grades)</option>
+                            <option value="2">II - Elementary School</option>
+                            <option value="3">III - Middle School (3 years)</option>
+                            <option value="4">IV - Middle school (4 years)</option>
+                            <option value="5">V - High School</option>
+                            <option value="6">VI - Faculty (Bachelor's Degree)</option>
+                            <option value="7">VII - Faculty (Master's Degree)</option>
+                            <option value="8">VIII - Faculty (Doctor's degree)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-2" style="margin-top: 3%;">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <input class="form-control form-control-lg" id="formFileLgCV" type="file" (change)="addCV($event)"/>
+                            <label class="form-label" for="formFileLgCV" >Attach CV</label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-2">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                            <input class="form-control form-control-lg" id="formFileLgCL" type="file" (change)="addCL($event)"/>
+                            <label class="form-label" for="formFileLgCL" >Attach Cover Letter</label>
+                        </div>
+                    </div>
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" class="btn btn-primary btn-lg" (click)="submit()"
+                       [disabled] = "this.user.firstName === '' || this.user.lastName === '' || this.user.education === ''
+                       || this.user.street === '' || this.user.city === '' || this.coverLetter === undefined || this.cv === undefined" >Register</button>
+                    </div>
+  
+                  
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
